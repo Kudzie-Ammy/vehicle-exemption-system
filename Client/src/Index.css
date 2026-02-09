@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .ant-layout {
+    min-height: 100vh; /* Ensure the layout takes full height */
+  }
+  
+  .ant-layout-header {
+    background: #1890ff; /* Header background color */
+    color: white;
+  }
+  
+  .ant-layout-sider {
+    background: #001529; /* Sidebar background color */
+  }
+  
+  .ant-layout-content {
+    background: #fff; /* Content background color */
+    padding: 20px; /* Padding around content */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .your-class {
+      font-size: 14px; /* Smaller font size for mobile */
+    }
+}

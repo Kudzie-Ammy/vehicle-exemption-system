@@ -1,0 +1,104 @@
+:root {
+  --bg-page: #f8fafc;
+  --card-shadow: 0 6px 18px rgba(8, 15, 22, 0.05);
+  --card-hover-shadow: 0 10px 30px rgba(8, 15, 22, 0.07);
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --rounded: 12px;
+  --font-stack: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.dashboard-container {
+  min-height: calc(100vh - 80px);
+  background: var(--bg-page);
+  font-family: var(--font-stack);
+  padding: 20px;
+}
+
+/* summary cards */
+.summary-card {
+  text-align: center;
+  border-radius: var(--rounded);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-width: 180px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.summary-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.card-title {
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.card-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* legend rows for pie chart */
+.legend-row {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.legend-label {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* filters area */
+.filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* table styling */
+.ant-table-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* responsive tweaks */
+@media (max-width: 992px) {
+  .summary-card {
+    min-width: 160px;
+  }
+
+  .filters {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 12px;
+  }
+}

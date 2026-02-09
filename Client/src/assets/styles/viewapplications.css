@@ -1,0 +1,19 @@
+/* viewapplications.css */
+
+.truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px; /* adjust per your design */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.truncate-wide {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px; /* for slightly wider columns like address */
+  display: inline-block;
+  vertical-align: middle;
+}
